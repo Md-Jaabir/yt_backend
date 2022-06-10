@@ -14,7 +14,7 @@ async function publishContact(req,res){
     });
   
     let savedContactObj= await newContactObj.save();
-    re
+    res.jspn({message:"successs",savedObj:savedContactObj});
   }catch(err){
     console.log(err);
     res.status(404).json({error:"error_sending"});
