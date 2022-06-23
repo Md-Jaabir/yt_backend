@@ -10,9 +10,6 @@ const {addVideo}=require('../controller/admin');
 const {deleteVideo}=require('../controller/admin');
 const checkLogin=require('../controller/checkAdminToken');
 const router=express.Router();
-const cors=require("cors");
-app.use(cors({origin:"*",methods:["GET","POST","PUT","PATCH"]}));
-
 router.get('/contact_msgs',checkLogin,viewContactMsgs)
 router.post('/login',handleAdminLogin);
 router.post('/publish_blog',checkLogin,publishBlog);
