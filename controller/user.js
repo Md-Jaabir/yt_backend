@@ -3,8 +3,6 @@ let riviewModel=require('../models/riview');
 let blogModel=require('../models/blog');
 let videoModel=require('../models/video');
 let commentModel=require('../models/comment');
-const cors=require("cors");
-app.use(cors({origin:"*",methods:["GET","POST","PUT","PATCH"]}));
 async function publishContact(req,res){
   try{
     let newContactObj=new contactModel({
