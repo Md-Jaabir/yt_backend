@@ -7,8 +7,6 @@ const {publishComment}=require('../controller/user');
 const {getComments}=require('../controller/user');
 const {getVideos}=require('../controller/user');
 const router=express.Router();
-const cors=require("cors");
-app.use(cors({origin:"*",methods:["GET","POST","PUT","PATCH"]}));
 
 router.post('/contact',publishContact);
 router.post('/publish_riview',publishRiview);
