@@ -1,6 +1,4 @@
 const jwt=require('jsonwebtoken');
-const cors=require("cors");
-app.use(cors({origin:"*",methods:["GET","POST","PUT","PATCH"]}));
 async function checkLogin(req,res,next){
   try{
       if(req.headers.authorization){
