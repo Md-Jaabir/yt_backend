@@ -3,8 +3,6 @@ const adminModel=require('../models/admin');
 const blogModel=require('../models/blog');
 const videoModel=require('../models/video');
 const jwt = require('jsonwebtoken');
-const cors=require("cors");
-app.use(cors({origin:"*",methods:["GET","POST","PUT","PATCH"]}));
 
 async function viewContactMsgs(req,res){
   let msgs=await contactModel.find();
