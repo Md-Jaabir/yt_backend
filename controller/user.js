@@ -25,6 +25,7 @@ async function publishRiview(req,res){
     let newRiview = new riviewModel({
       name:req.body.name,
       stars:req.body.stars,
+      email:req.body.email,
       description:req.body.description
     });
     console.log(newRiview);
