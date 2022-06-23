@@ -8,7 +8,7 @@ const { default: mongoose } = require("mongoose");
 dotenv.config({ path: 'config.env' });
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
-app.use(cors({origin:"*"}));
+app.use(cors({origin:"*",methods:["GET","POST","PUT","PATCH"]}));
 mongoose.connect(process.env.DB_URL,{
   useNewUrlParser:true,
   useUnifiedTopology:true
