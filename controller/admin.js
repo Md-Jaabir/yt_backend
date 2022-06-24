@@ -34,7 +34,8 @@ async function publishBlog(req,res){
     const newBlog=new blogModel({
       title:req.body.title,
       coverImageUrl:req.body.coverImageUrl,
-      content:req.body.content
+      content:req.body.content,
+      date:req.body.date
     });
     let savedBlog=await newBlog.save();
     res.json({message:"success",insertedBlog:savedBlog});
