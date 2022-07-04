@@ -116,7 +116,7 @@ async function deleteVideo(req,res){
 
 async function getAdminInformation(req,res){
   try{
-    const adminInfo=await adminModel.find({})[0];
+    const adminInfo=await adminModel.findOne({});
     if(adminInfo){
       res.json({message:"success",info:adminInfo});
     }else{
