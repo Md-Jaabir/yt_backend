@@ -114,6 +114,19 @@ async function deleteVideo(req,res){
   }
 }
 
+async function getAdminInformation(req,res){
+  try{
+    const adminInfo=await adminModel.find({})[0];
+    if(adminInfo){
+      res.json({message:"success",info:adminInfo});
+    }else{
+      res.json({message:"error"})
+    }
+  }catch(err){
+    console.log(err);
+  }
+}
+
 
 module.exports={
   viewContactMsgs,
@@ -124,5 +137,6 @@ module.exports={
   deleteContact,
   updateAdminInfo,
   addVideo,
-  deleteVideo
+  deleteVideo,
+  getAdminInformation
 }
