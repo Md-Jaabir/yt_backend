@@ -7,9 +7,12 @@ const {deleteBlog}=require('../controller/admin');
 const {deleteContact}=require('../controller/admin');
 const {updateAdminInfo}=require('../controller/admin');
 const {addVideo}=require('../controller/admin');
+const {getAdminInformation}=require('../controller/admin');
 const {deleteVideo}=require('../controller/admin');
 const checkLogin=require('../controller/checkAdminToken');
 const router=express.Router();
+
+router.get('/admin_info',checkLogin,getAdminInformation)
 router.get('/contact_msgs',checkLogin,viewContactMsgs)
 router.post('/login',handleAdminLogin);
 router.post('/publish_blog',checkLogin,publishBlog);
